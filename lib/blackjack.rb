@@ -3,19 +3,19 @@ def welcome
 end	
  def deal_card	def deal_card
   # code #deal_card here	  rand(1..11)
-end	
+end
  def display_card_total	def display_card_total(total)
   # code #display_card_total here	  puts "Your cards add up to #{total}"
-end	
+end
  def prompt_user	def prompt_user
   # code #prompt_user here	  puts "Type 'h' to hit or 's' to stay"
-end	
+end
  def get_user_input	def get_user_input
   # code #get_user_input here	  gets.chomp
-end	
+end
  def end_game	def end_game(bust_total)
   # code #end_game here	  puts "Sorry, you hit #{bust_total}. Thanks for playing!"
-end	
+end
  def initial_round	def initial_round
   # code #initial_round here	  result = 0
 end	  2.times do
@@ -35,10 +35,10 @@ end
     invalid_command
     hit?(result)
   end
-end	
+end
  def invalid_command	def invalid_command
   # code invalid_command here	    puts "Invalid command"
-end	  
+end
 
 def runner
   # code runner here	  welcome
@@ -48,4 +48,4 @@ def runner
     display_card_total(card_total)
   end
 end_game(card_total)
-end	
+end
