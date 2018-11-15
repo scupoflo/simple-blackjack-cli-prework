@@ -25,7 +25,7 @@ end
 
 def initial_round
   sum = deal_card + deal_card
-display_card_total(sum) 
+display_card_total(sum)
 return sum
 end
 
@@ -36,7 +36,7 @@ def hit? (number)
    total = deal_card + number
    return total
   elsif answer == 's'
-    return number 
+    return number
   else
     invalid_command
     prompt_user
@@ -51,6 +51,11 @@ end
 #####################################################
 
 def runner
-  # code runner here
+  welcome
+  hand = initial_round
+until hand > 21 do
+  hand = hit?(hand)
+  display_card_total(hand)
 end
-    
+   end_game(hand)
+end
